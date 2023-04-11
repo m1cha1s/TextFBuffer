@@ -17,6 +17,8 @@ clean:
 
 .PHONY: test
 test: build test.o
+	$(CC) -o test -L./libtfb.a -I. test.o
+	./test
 
 .PHONY: install
 install: build
